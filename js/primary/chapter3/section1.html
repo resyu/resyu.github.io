@@ -94,7 +94,7 @@
                 <a href="../../../">
             
                     
-                    前言
+                    COVER
             
                 </a>
             
@@ -102,14 +102,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../">
+        <li class="chapter " data-level="1.2" >
             
-                <a href="../">
+                <span>
             
                     
                     JavasSript
             
-                </a>
+                </span>
             
 
             
@@ -283,7 +283,165 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="resyugithubio">resyu.github.io</h1>
+                                <blockquote>
+<p><strong>Q</strong></p>
+<p>&#x5982;&#x4F55;&#x51C6;&#x786E;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x6570;&#x7EC4;&#x7C7B;&#x578B;</p>
+<p>&#x5199;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;&#x7684;&#x4F8B;&#x5B50;</p>
+<p>&#x63CF;&#x8FF0;new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x8FC7;&#x7A0B;</p>
+<p>zepto(&#x6216;&#x5176;&#x4ED6;&#x6846;&#x67B6;)&#x6E90;&#x7801;&#x4E2D;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x94FE;</p>
+</blockquote>
+<p><strong>&#x3010;&#x539F;&#x578B;&#x548C;&#x539F;&#x578B;&#x94FE;&#x3011;</strong>
+<em>&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;</em>
+<strong>&#x6784;&#x9020;&#x51FD;&#x6570;</strong></p>
+<ul>
+<li>&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params">name,age</span>)</span>{
+<span class="hljs-keyword">this</span>.name=name
+<span class="hljs-keyword">this</span>.age=age
+<span class="hljs-keyword">this</span>.class=<span class="hljs-string">&apos;class-1&apos;</span>
+<span class="hljs-comment">// return this //&#x9ED8;&#x8BA4;&#x6709;&#x8FD9;&#x4E00;&#x884C;</span>
+}
+<span class="hljs-keyword">var</span> f=<span class="hljs-keyword">new</span> Foo(<span class="hljs-string">&apos;z&apos;</span>,<span class="hljs-number">20</span>)
+<span class="hljs-comment">// var f1=new Foo(&apos;l&apos;,19) //&#x521B;&#x5EFA;&#x5BF9;&#x8C61;</span>
+</code></pre>
+<strong>&#x6784;&#x9020;&#x51FD;&#x6570; - &#x6269;&#x5C55;</strong></li>
+<li>var a={} &#x5176;&#x5B9E;&#x662F;var a=new Object()&#x7684;&#x8BED;&#x6CD5;&#x7CD6;</li>
+<li>var a=[] &#x5176;&#x5B9E;&#x662F;var a=new Array()&#x7684;&#x8BED;&#x6CD5;&#x7CD6;</li>
+<li>function Foo(){} &#x5176;&#x5B9E;&#x662F;var Foo=new Function()&#x7684;&#x4E00;&#x4E2A;&#x8FC7;&#x7A0B;</li>
+<li>&#x4F7F;&#x7528;instanceof&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</li>
+</ul>
+<p><strong>&#x539F;&#x578B;&#x89C4;&#x5219;&#x548C;&#x793A;&#x4F8B;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> obj={};obj.a=<span class="hljs-number">100</span>
+<span class="hljs-keyword">var</span> arr=[];arr.a=<span class="hljs-number">100</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>{}
+fn.a=<span class="hljs-number">100</span>
+
+<span class="hljs-built_in">console</span>.log(obj.__proto__)
+<span class="hljs-built_in">console</span>.log(arr.__proto__)
+<span class="hljs-built_in">console</span>.log(fn.__proto__)
+
+<span class="hljs-built_in">console</span>.log(fn.prototype)
+
+<span class="hljs-built_in">console</span>.log(obj.__proto__===<span class="hljs-built_in">Object</span>.prototype)
+</code></pre>
+<ul>
+<li><p>&#x6240;&#x6709;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF08;&#x6570;&#x7EC4;&#x3001;&#x5BF9;&#x8C61;&#x3001;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x90FD;&#x5177;&#x6709;&#x5BF9;&#x8C61;&#x7279;&#x6027;&#xFF0C;&#x5373;&#x53EF;&#x81EA;&#x7531;&#x6269;&#x5C55;&#x5C5E;&#x6027;&#xFF08;&#x9664;&#x4E86;&#x2018;null&#x2019;&#x4EE5;&#x5916;&#xFF09;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF08;&#x6570;&#x7EC4;&#x3001;&#x5BF9;&#x8C61;&#x3001;&#x51FD;&#x6570;&#xFF09;&#xFF0C;&#x90FD;&#x5177;&#x6709;<strong>proto</strong>&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x9664;&#x4E86;&#x2018;null&#x2019;&#x4EE5;&#x5916;&#xFF09;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x90FD;&#x6709;&#x4E00;&#x4E2A;prototype&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF08;&#x6570;&#x7EC4;&#x3001;&#x5BF9;&#x8C61;&#x3001;&#x51FD;&#x6570;&#xFF09;&#xFF0C;<strong>proto</strong>&#x5C5E;&#x6027;&#x503C;&#x6307;&#x5411;&#x5B83;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x2018;prototype&#x2019;&#x5C5E;&#x6027;&#x503C;</p>
+</li>
+<li><p>&#x5F53;&#x8BD5;&#x56FE;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x53BB;&#x5B83;&#x7684;<strong>proto</strong>&#xFF08;&#x5373;&#x5B83;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;prototype&#xFF09;&#x4E2D;&#x5BFB;&#x627E;</p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params">name,age</span>)</span>{
+  <span class="hljs-keyword">this</span>.name=name
+}
+Foo.prototype.alertName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  alert(<span class="hljs-keyword">this</span>.name)
+}
+<span class="hljs-comment">//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">var</span> f=<span class="hljs-keyword">new</span> Foo(<span class="hljs-string">&apos;z&apos;</span>)
+f.printName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)
+}
+f.printName()
+f.alertName()
+
+<span class="hljs-comment">//&#x904D;&#x5386;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">var</span> item
+<span class="hljs-keyword">for</span>(item <span class="hljs-keyword">in</span> f){
+  <span class="hljs-comment">//&#x9AD8;&#x7EA7;&#x6D4F;&#x89C8;&#x5668;&#x5DF2;&#x7ECF;&#x5728;for in &#x4E2D;&#x5C4F;&#x853D;&#x4E86;&#x6765;&#x81EA;&#x539F;&#x578B;&#x7684;&#x5C5E;&#x6027;</span>
+  <span class="hljs-comment">//&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x52A0;&#x4E0A;&#x8FD9;&#x4E2A;&#x5224;&#x65AD;&#x4FDD;&#x8BC1;&#x5065;&#x58EE;</span>
+  <span class="hljs-keyword">if</span>(f.hasOwnProperty(item)){
+    <span class="hljs-built_in">console</span>.log(item)
+  }
+}
+</code></pre>
+<p><strong>&#x539F;&#x578B;&#x94FE;</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params">name,age</span>)</span>{
+  <span class="hljs-keyword">this</span>.name=name
+}
+Foo.prototype.alertName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  alert(<span class="hljs-keyword">this</span>.name)
+}
+<span class="hljs-comment">//&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-keyword">var</span> f=<span class="hljs-keyword">new</span> Foo(<span class="hljs-string">&apos;z&apos;</span>)
+f.printName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name)
+}
+f.printName()
+f.alertName()
+f.toString()<span class="hljs-comment">//&#x5728;f.__proto__.__proto__&#x4E2D;&#x53BB;&#x627E;</span>
+</code></pre>
+<p><img src="proto.jpg" alt="&#x539F;&#x578B;&#x94FE;">
+<strong>instanceof</strong></p>
+<ul>
+<li>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x662F;&#x5426;&#x5C5E;&#x4E8E;&#x67D0;&#x6784;&#x9020;&#x51FD;&#x6570;
+&gt;<blockquote>
+<p><strong>A</strong></p>
+</blockquote>
+</li>
+</ul>
+<p><strong>&#x5982;&#x4F55;&#x51C6;&#x786E;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x6570;&#x7EC4;&#x7C7B;&#x578B;</strong></p>
+<ul>
+<li>&#x4F7F;&#x7528;instanceof&#x5224;&#x65AD;<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr=[]
+arr <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span> <span class="hljs-comment">//true</span>
+<span class="hljs-keyword">typeof</span> arr <span class="hljs-comment">//object, typeof&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x7EC4;</span>
+</code></pre>
+<strong>&#x5199;&#x4E00;&#x4E2A;&#x539F;&#x578B;&#x94FE;&#x7EE7;&#x627F;&#x7684;&#x4F8B;&#x5B50;</strong>
+```js
+//&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x4F8B;&#x5B50; &#x4E0D;&#x63A8;&#x8350;
+function Animal(){
+this.eat=function(){
+  console.log(&apos;animal eat&apos;)
+}
+}
+function Dog(){
+this.bark=function(){
+  console.log(&apos;dog bark&apos;)
+}
+}
+Dog.prototype=new Animal()
+var hashiqi=new Dog()</li>
+</ul>
+<p>//&#x5C01;&#x88C5;&#x4E00;&#x4E2A;dom&#x67E5;&#x8BE2; &#x63A8;&#x8350;
+function Elem(id){
+  this.elem=document.getElementById(id)
+}</p>
+<p>Elem.prototype.html=function(val){
+  var elem=this.elem
+  if(val){
+    elem.innerHTML=val
+    return this
+  }else{
+    return elem.innerHTML
+  }
+}</p>
+<p>Elem.prototype.on=function(type,fn){
+  var elem=this.elem
+  elem.addEventListener(type,fn)
+  return this
+}</p>
+<p>var div1=new Elem(&apos;div1&apos;)
+div1.html(&apos;</p><p>txt</p>&apos;).on(&apos;click&apos;,function(){
+  console.log(&apos;clicked&apos;)
+}).html(&apos;<p>change</p>&apos;)
+```<p></p>
+<p><strong>&#x63CF;&#x8FF0;new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x8FC7;&#x7A0B;</strong></p>
+<ul>
+<li><p>&#x9996;&#x5148;new&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x7684;this&#x4F1A;&#x53D8;&#x6210;&#x7A7A;&#x5BF9;&#x8C61;&#xFF08;&#x6709;&#x53C2;&#x6570;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5BF9;this&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x628A;this&#x7ED9;return&#x51FA;&#x53BB;&#xFF09;</p>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;</p>
+</li>
+<li>this&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;</li>
+<li>&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x5373;&#x5BF9;this&#x8D4B;&#x503C;</li>
+<li>&#x8FD4;&#x56DE;this</li>
+</ul>
+<p><strong>zepto(&#x6216;&#x5176;&#x4ED6;&#x6846;&#x67B6;)&#x6E90;&#x7801;&#x4E2D;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x94FE;</strong></p>
 
                                 
                                 </section>
@@ -327,7 +485,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"原型和原型链","level":"1.2.2","depth":2,"next":{"title":"作用域和闭包","level":"1.2.3","depth":2,"path":"js/primary/chapter4/section1.md","ref":"js/primary/chapter4/section1.md","articles":[]},"previous":{"title":"变量类型和计算","level":"1.2.1","depth":2,"path":"js/primary/chapter2/section1.md","ref":"js/primary/chapter2/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/primary/chapter3/section1.md","mtime":"2019-09-18T02:09:25.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T15:34:36.694Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"原型和原型链","level":"1.2.2","depth":2,"next":{"title":"作用域和闭包","level":"1.2.3","depth":2,"path":"js/primary/chapter4/section1.md","ref":"js/primary/chapter4/section1.md","articles":[]},"previous":{"title":"变量类型和计算","level":"1.2.1","depth":2,"path":"js/primary/chapter2/section1.md","ref":"js/primary/chapter2/section1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/primary/chapter3/section1.md","mtime":"2020-01-18T16:09:35.627Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T16:09:53.115Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -335,10 +493,6 @@
         
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>

@@ -1,7 +1,7 @@
 # 目录
 
-* [前言](README.md)
-* [JavasSript](js/primary/README.md)
+* [COVER](README.md)
+* [JavasSript]()
     * [变量类型和计算](js/primary/chapter2/section1.md)
     * [原型和原型链](js/primary/chapter3/section1.md)
     * [作用域和闭包](js/primary/chapter4/section1.md)
